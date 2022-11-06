@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/*
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+
+
+*/
+
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.attribution { font-size: 17px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(151, 24%, 22%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+
+}
+
+body{
+    font-family: 'Montserrat', serif;
+    background-color: var(--Cream);
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card-container{
+    display: flex;
+    border-radius: 10px;
+    width: calc(50% - 15%);
+    overflow: hidden;
+
+}
+
+#image-parfum-desktop{
+    max-width: 50%;
+}
+
+#image-parfum-mobile{
+    display: none;
+}
+
+.card-container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+    background-color: var(--White);
+}
+
+.card-perfurme-text{
+    letter-spacing: 7px;
+    font-size: 21px;
+    color: var(--Dark-grayish-blue);
+}
+
+
+.card-title{
+    font-size: 65px;
+    font-family: 'Fraunces', serif;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.card-para{
+    color: var(--Dark-grayish-blue);
+    line-height: 35px;
+    font-size: 23px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.card-price{
+    display: flex;
+    align-items: center;
+    gap: 25px
+}
+
+.card-current-price{
+    font-size: 45px;
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', serif;
+}
+
+.card-old-price{
+    text-decoration: line-through;
+    font-size: 21px;
+    color: var(--Dark-grayish-blue);
+}
+
+.card-buy{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 20px 0;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card-buy:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+#card-shop-icon{
+    margin-right: 22px;
+    transform: scale(1.7);
+}
+
+
+
+
+@media screen and (max-width: 2670px) {
+    .card-container{
+        width: 45%;
+    }
+}
+
+
+@media screen and (max-width: 2132px) {
+    .card-container{
+        width: 55%;
+    }
+}
+
+
+@media screen and (max-width: 1767px) {
+    .card-container{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1473px) {
+    .card-container{
+        width: 75%;
+    }
+}
+
+
+@media screen and (max-width: 1235px) {
+    .card-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-container{
+        width: 65%;
+        flex-wrap: wrap;
+    }
+
+    .card-container-text{
+        gap: 25px;
+    }
+
+    #image-parfum-desktop{
+        display: none;
+    }
+
+    #image-parfum-mobile{
+        display: block;
+
+    }
+
+    .attribution{
+        margin-top: 500px;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .card-container{
+        width: 80%;
+    }
+
+    .card-container-text{
+        gap: 35px;
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+    .card-title{
+        font-size: 50px;
+    }
+
+    .card-para{
+        font-size: 25px;
+    }
+
+    .card-container-text{
+        gap: 35px;
+    }
+
+    .card-price{
+        flex-wrap: wrap;
+    }
+
+}
+
+
+
+
+
